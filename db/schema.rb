@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2) do
 
-# Could not dump table "users" because of following StandardError
-#   Unknown type 'deciman' for column 'balance'
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password"
+    t.decimal "balance"
+  end
 
 end
